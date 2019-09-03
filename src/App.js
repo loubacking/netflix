@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import configureStore from './store/configStore';
+import DashboardScreen from './modules/Dashboard';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const store = configureStore();
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <Router>
+          <div>
+            <Route exact path="/" component={DashboardScreen} />
+          </div>
+        </Router>
+      </Provider>
+    )
+  }
 }
-
-export default App;
