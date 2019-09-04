@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    padding: 0 55px;
+    margin-top: 10px;
+    max-width: 100%;
+  }
+
+  .item {
+    background: green;
+    flex: 0 0 19.7%;
+    text-align: center;
+    margin: 0 2px;
+    transition: transform 300ms ease 100ms;
+    width: 20%;
+  }
+
+  .container:hover .item {
+    transform: translateX(-25%);
+ }
+
+ .item:hover ~ .item {
+    transform: translateX(25%);
+ }
+
+ .item:hover {
+    transform: scale(1.5) !important;
+  }
+  
+  .slider {
+    display: flex;
+    position: relative;
+  }

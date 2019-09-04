@@ -10,6 +10,6 @@ export const Client = axios.create({
 	headers: { 'Content-Type': 'application/json' }
 });
 
-export const Movie = (movieId) => Client.get(`movie/${movieId}`, { params: { 'api_key': 'd1652866a0537f066c5080d3e73c1c55' } });
+export const getMovie = (movieId) => Client.get(`movie/${movieId}`, { params: { 'api_key': 'd1652866a0537f066c5080d3e73c1c55' } });
 
-export const Discover = () => Client.get('discover/movie', { params: { 'api_key': 'd1652866a0537f066c5080d3e73c1c55' } });
+export const getDiscover = () => Client.get('discover/movie', { params: { 'api_key': 'd1652866a0537f066c5080d3e73c1c55' } });

@@ -22,7 +22,7 @@ export const Wrapper = styled('div')`
 
 export const Icon = styled(FontAwesomeIcon)`
 	display: flex;
-	font-size: 18px;
+	font-size: 1.1vw;
 	margin-right: 0.75em;
 `;
 

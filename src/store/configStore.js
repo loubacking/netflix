@@ -9,11 +9,11 @@ import rootReducer from './reducers';
 
 const sagaMiddleware = createSagaMiddleware();
 
-export default function configureStore() {
-	const store = createStore(
-		rootReducer,
-		applyMiddleware(sagaMiddleware)
-	)
+let store = null;
 
-	return store;
-}
+store = createStore(
+	rootReducer,
+	applyMiddleware(sagaMiddleware)
+);
+
+export default store;

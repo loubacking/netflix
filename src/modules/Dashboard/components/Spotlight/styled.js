@@ -31,6 +31,7 @@ export const Description = styled('div')`
 	font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	width: 600px;
 	margin-top: 20px;
+	height: 220px;
 `;
 
 export const Background = styled('img')`
